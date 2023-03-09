@@ -13,10 +13,7 @@ class MemberRepositoryTest {
 
     MemberRepository memberRepository = MemberRepository.getInstance();
 
-    @AfterEach
-    void afterEach() {
-        memberRepository.clearStoer();
-    }
+
 
     @Test
     void save() {

@@ -6,10 +6,8 @@ import java.util.List;
 import java.util.Map;
 
 public class MemberRepository {
-
-    private static Map<Long, Member> store = new HashMap<>();
-    private static long sequence = 0L;
-
+    private static Map<Long, Member> store = new HashMap<>(); //static 사용
+    private static long sequence = 0L; //static 사용
     private static final MemberRepository instance = new MemberRepository();
 
     public static MemberRepository getInstance() {
@@ -17,7 +15,6 @@ public class MemberRepository {
     }
 
     private MemberRepository() {
-
     }
 
     public Member save(Member member) {
@@ -34,7 +31,7 @@ public class MemberRepository {
         return new ArrayList<>(store.values());
     }
 
-    public void clearStoer() {
+    public void clearStore() {
         store.clear();
     }
 }
