@@ -13,7 +13,6 @@ import java.util.Map;
 
 public class ControllerV3HandlerAdapter implements MyHandlerAdapter {
 
-
     @Override
     public boolean supports(Object handler) {
         return (handler instanceof ControllerV3);
@@ -27,8 +26,8 @@ public class ControllerV3HandlerAdapter implements MyHandlerAdapter {
         ControllerV3 controller = (ControllerV3) handler;
 
         Map<String, String> paramMap = createParamMap(request);
-        ModelView modelView = controller.process(paramMap);
 
+        ModelView modelView = controller.process(paramMap);
         return modelView;
     }
 
