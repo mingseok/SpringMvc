@@ -27,6 +27,7 @@ public class MyView {
 
         modelToRequestAttribute(model, request);
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
+
         dispatcher.forward(request, response);
     }
 
